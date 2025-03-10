@@ -1,0 +1,110 @@
+/* Universal selector to apply global styles */
+* {
+    font-family: 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: normal;
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th {
+    padding: 12px 5px;
+    background-color: #535756;
+    color: white;
+    width: fit-content;
+    font-weight: 500;
+  }
+  
+  /* Zebra striping for table rows */
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  td {
+    vertical-align: top;
+    padding: 10px;
+  }
+  
+  #webname {
+    background-color: #65d6bc;
+    opacity: 0.5;
+    font-weight: bold;
+  }
+  
+  /* Nav styling for horizontal layout */
+  nav {
+    display: flex;
+    padding: 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #0055AA;
+    margin-right: 15px;
+    display: inline-block;
+  }
+
+  /* Form styling */
+  form * {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  form {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  /* Header styling */
+  header h1 {
+    margin-top: 0;
+    padding-top: 15px;
+  }
+  
+  /* Profile image container */
+  .profile-img {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .profile-img img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+
+   /* Button styling */
+    input[type="submit"] {
+    background-color: #65d6bc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+    background-color: #4fb3a0;
+    }
+    
