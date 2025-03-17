@@ -91,20 +91,23 @@
   
   
 
-   /* Button styling */
-    input[type="submit"] {
-    background-color: #65d6bc;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 25px;
-    margin-top: 15px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    }
+  /* Button styling */
+  input[type="submit"] {
+  background-color: #65d6bc;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  }
 
-    input[type="submit"]:hover {
-    background-color: #4fb3a0;
-    }
-    
+  input[type="submit"]:hover {
+  background-color: #4fb3a0;
+  }
+  
+  #seeMoreButton {
+    border-radius: 12px;
+  }
