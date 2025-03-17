@@ -58,7 +58,7 @@ function greetingFunc(){
     document.querySelector("h2").innerHTML = greetingMessage + ", I am Bo";
 }
 
-// Check if the current page is index.html and invoke greetingFunc() if it is
-if (window.location.href.includes("index.html")) {
+// Check if the current page is the homepage or index.html and invoke greetingFunc() if it is
+if (window.location.href.endsWith('/') || window.location.href.endsWith('index.html')) {
     greetingFunc();
 }
