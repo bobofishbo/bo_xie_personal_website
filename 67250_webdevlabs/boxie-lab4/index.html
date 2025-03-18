@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script defer src="./static/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="static/script.js" defer></script>
 </head>
 
 <body>
@@ -29,14 +30,20 @@
         <div style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
             <img src="../boxie-lab4/static/profile.jpg" alt="Bo" style="width: 100%; height: auto;">
         </div>
-        <p id="shortIntro">I am a student at CMU studying 
+        <div><p id="shortIntro">I am a student at CMU studying 
             Information Systems. Click Read More to see my longer bio.</p>
-
-        <p id="longIntro">I am a student at Carnegie Mellon University studying 
+        </div>
+        <div id="longIntro" style="display: none;">
+            <p>I am a student at Carnegie Mellon University studying 
             Information Systems. I am passionate about technology and its 
             applications in business. I am also interested in web development and design. 
             I am excited to learn more about web development in this course.</p>
+        </div>
 
+        <button id="readMoreBtn">Read More</button>
+
+        <button id="readLessBtn" style="display: none;">Read Less</button>
+        
     </div> 
     <footer>
         <p id="copyYear"> Designed and Coded by Bo Xie &copy;</p>

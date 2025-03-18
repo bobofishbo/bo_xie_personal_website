@@ -42,6 +42,34 @@
 // findTheBanana(L1);
 // findTheBanana(L2);
 
+
+$(document).ready(function() {
+    $("#readMoreBtn").click(function() {
+        console.log("clicked");
+        $("#shortIntro").hide();
+        $("#longIntro").show();
+        $("#readMoreBtn").hide();
+        $("#readLessBtn").show();
+    });
+
+    $("#readLessBtn").click(function() {
+        $("#shortIntro").show();
+        $("#longIntro").hide();
+        $("#readMoreBtn").show();
+        $("#readLessBtn").hide();
+    });
+
+    //add year to footer
+    function addYear() {
+        let currentYear = new Date().getFullYear();
+        let copyYearElement = document.getElementById("copyYear");
+        let existingText = copyYearElement.innerHTML;
+        copyYearElement.innerHTML = existingText + " " + currentYear;
+    }
+    addYear();
+});
+
+
 function greetingFunc(){
     let d = new Date();
     let h = d.getHours();
@@ -63,18 +91,46 @@ if (window.location.href.endsWith('/') || window.location.href.endsWith('index.h
     greetingFunc();
 }
 
-//add year to footer
-function addYear() {
-    let currentYear = new Date().getFullYear();
-    let copyYearElement = document.getElementById("copyYear");
-    let existingText = copyYearElement.innerHTML;
-    copyYearElement.innerHTML = existingText + " " + currentYear;
-}
-addYear();
 
 function showList(){
     let button = document.getElementById("seeMoreButton");
     let list = document.getElementById("funList");
     list.style.display = "block";
     button.style.display = "none";
+}
+
+function validateForm() {
+    const validationMessage = document.getElementById("validationMessage");
+    validationMessage.innerHTML = "";
+    let isValid = true;
+
+    // Validate name
+    const name = document.getElementById("name");
+    if (!name.checkValidity()) {
+        isValid = false;
+        validationMessage.innerHTML += "Please enter your name.<br>";
+        return;
+    }
+
+    // Validate email
+    const email = document.getElementById("email");
+    if (!email.checkValidity()) {
+        isValid = false;
+        validationMessage.innerHTML += "Please enter a valid email address.<br>";
+        return;
+    }
+
+    // Validate comment
+    const comment = document.getElementById("comment");
+    if (!comment.checkValidity()) {
+        isValid = false;
+        validationMessage.innerHTML += "Please enter your comment.<br>";
+        return;
+    }
+
+    // If all fields are valid
+    if (isValid) {
+        validationMessage.innerHTML = "Form submitted successfully!";
+        document.getElementById("contactForm").reset();
+    }
 }

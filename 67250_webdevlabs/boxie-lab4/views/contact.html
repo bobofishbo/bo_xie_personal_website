@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../static/script.js" defer></script>
 </head>
 <body>
@@ -25,15 +26,16 @@
     </header>
     <div class="main">
         <h2>Contact Me</h2>
-        <form>
+        <form id="contactForm">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required><br>
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required><br>
             <label for="comment">Comment:</label><br>
             <textarea id="comment" name="comment" required></textarea><br>
-            <input type="submit" value="Submit">
+            <button type="submit" onclick="validateForm()">Submit</button>
         </form>
+        <div id="validationMessage"></div>
 
         <table>
             <tr>
