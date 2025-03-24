@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <header >
+    <header>
         <h1 id="webname">Bo Xie</h1>
         <nav>
             <a href="../index.html">Home</a>
@@ -25,19 +25,42 @@
             <a href="fun.html">For fun</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <button id="seeMoreButton" onclick="showList()">Click to see...</button>
-        <ul id="funList" style="display: none;">
-            <li>Soccer</li>
-            <li>Watching movies</li>
-            <li>Sleeping</li>
-            <li>Traveling</li>
-        </ul>
+    <div class="mainLayout">
+        <div id="item1">
+            <h2>Things I love to do for fun</h2>
+            <!-- Commented out the button -->
+            <!-- <button id="seeMoreButton" onclick="showList()">Click to see...</button> -->
+            <ul id="funList">
+                <li>Soccer</li>
+                <li>Watching movies</li>
+                <li>Sleeping</li>
+                <li>Traveling</li>
+            </ul>
+        </div>
+        <div id="item2">
+            <img src="../static/funIMG.png" alt="Fun Activity" class="funIMG">
+        </div>
+        <div id="item3">
+            <h2>Youtube Video</h2>
+            <iframe 
+                class="videoFrame" 
+                src="https://www.youtube.com/embed/qkFYqY3vr84" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div id="item4">
+            <div class="container">
+                <h2>Need Some Advice?</h2>
+                <p id="adviceText">Click the button to get a random piece of advice!</p>
+                <button onclick="getAdvice()">Get Advice</button>
+            </div>
+        </div>
     </div>  
     <footer>
         <p id="copyYear"> Designed and Coded by Bo Xie &copy;</p>
     </footer> 
-    
 </body>
 </html>

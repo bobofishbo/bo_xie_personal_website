@@ -44,6 +44,7 @@
 
 
 $(document).ready(function() {
+    console.log("Current page URL:", window.location.href);
     $("#readMoreBtn").click(function() {
         console.log("clicked");
         $("#shortIntro").hide();
@@ -59,15 +60,8 @@ $(document).ready(function() {
         $("#readLessBtn").hide();
     });
 
-    //add year to footer
-    function addYear() {
-        let currentYear = new Date().getFullYear();
-        let copyYearElement = document.getElementById("copyYear");
-        let existingText = copyYearElement.innerHTML;
-        copyYearElement.innerHTML = existingText + " " + currentYear;
-    }
-    addYear();
 });
+
 
 
 function greetingFunc(){
@@ -88,6 +82,7 @@ function greetingFunc(){
 
 // Check if the current page is the homepage or index.html and invoke greetingFunc() if it is
 if (window.location.href.endsWith('/') || window.location.href.endsWith('index.html')) {
+    console.log("Index page detected");
     greetingFunc();
 }
 
@@ -133,4 +128,39 @@ function validateForm() {
         validationMessage.innerHTML = "Form submitted successfully!";
         document.getElementById("contactForm").reset();
     }
+}
+
+function getAdvice() {
+    const adviceText = document.getElementById("adviceText");
+
+    // Fetch random advice from the Advice Slip API
+    fetch("https://api.adviceslip.com/advice")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Extract and display the advice
+            adviceText.innerText = `"${data.slip.advice}"`;
+        })
+        .catch(error => {
+            // Handle errors and display an error message
+            adviceText.innerText = "Oops! Something went wrong. Please try again.";
+            console.error("Error fetching advice:", error);
+        });
+}
+
+
+if (window.location.href.includes("fun.html")) {
+    console.log("Fun page detected");
+    // Run fun page-specific code
+    getAdvice();
+}
+
+if (window.location.href.includes("contact.html")) {
+    console.log("Contact page detected");
+    // Run contact page-specific code
+    validateForm();
 }

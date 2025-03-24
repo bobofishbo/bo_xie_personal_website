@@ -24,41 +24,59 @@
             <a href="fun.html">For fun</a>
         </nav>
     </header>
-    <div class="main">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="comment">Comment:</label><br>
-            <textarea id="comment" name="comment" required></textarea><br>
-            <button type="submit" onclick="validateForm()">Submit</button>
-        </form>
-        <div id="validationMessage"></div>
+    <div class="mainLayout">
+        <!-- Item 1: Find Me Section -->
+        <div id="item1">
+            <h2>Find Me</h2>
+            <iframe 
+                class="mapFrame" 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12144.514856616352!2d-79.9528444!3d40.45028805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1742788818554!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
 
-        <table>
-            <tr>
-                <th>Contact Information</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td>
-                    <strong>Email</strong>
-                </td>
-                <td >
-                    <p> boxie@andrew.cmu.edu </p>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <strong>Phone</strong>
-                </td>
-                <td>
-                    <p> 412-539-7693 </p>
-                </td>
-            </tr>
-        </table>           
+        <!-- Item 2: Contact Me Section -->
+        <div id="item2">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" required></textarea><br>
+                <button type="submit" onclick="validateForm()">Submit</button>
+            </form>
+            <div id="validationMessage"></div>
+
+            <table>
+                <tr>
+                    <th>Contact Information</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Email</strong>
+                    </td>
+                    <td >
+                        <p> boxie@andrew.cmu.edu </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Phone</strong>
+                    </td>
+                    <td>
+                        <p> 412-539-7693 </p>
+                    </td>
+                </tr>
+            </table>
+        </div>          
                 
     </div>  
     <footer>
