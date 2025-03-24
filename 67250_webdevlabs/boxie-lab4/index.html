@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/style.css">
+    <meta name="author" content="Bo Xie">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Your name professional website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bo Xie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="static/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="webname">Bo Xie</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="views/cv.html">CV</a>
+            <a href="views/contact.html">Contact Me</a>
+            <a href="views/fun.html">For fun</a>
+        </nav>
+    </header>
+    <div class="main">
+        <h2 id="title">Hi, my name is Bo</h2>
+        <div style="width: 300px; height: 300px; overflow: hidden; display: flex; justify-content: center; align-items: center;">
+            <img src="../boxie-lab4/static/profile.jpg" alt="Bo" style="width: 100%; height: auto;">
+        </div>
+        <div><p id="shortIntro">I am a student at CMU studying 
+            Information Systems. Click Read More to see my longer bio.</p>
+        </div>
+        <div id="longIntro" style="display: none;">
+            <p>I am a student at Carnegie Mellon University studying 
+            Information Systems. I am passionate about technology and its 
+            applications in business. I am also interested in web development and design. 
+            I am excited to learn more about web development in this course.</p>
+        </div>
+
+        <button id="readMoreBtn">Read More</button>
+
+        <button id="readLessBtn" style="display: none;">Read Less</button>
+        
+    </div> 
+    <footer>
+        <p id="copyYear"> Designed and Coded by Bo Xie &copy;</p>
+    </footer> 
+    
+</body>
+</html>
